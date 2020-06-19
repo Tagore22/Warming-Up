@@ -59,5 +59,5 @@ void Bank::ShowBank() const
  cout<<"예금주 : "<<Name<<endl;
 }
  
-
+#endif
  
