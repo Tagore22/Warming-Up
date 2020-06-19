@@ -1,6 +1,6 @@
-#include<Bank.h>
-#include<iostream>
-#include<cstring>
+#include <Bank.h>
+#include <iostream>
+#include <cstring> 
 
 void ShowMenu();
 void MakeBank();
@@ -136,7 +136,9 @@ void MakeBank()
   }
   cout<<"입금액 입력";
   cin>>Mon;
-  Banks[BackAcc]
+  Banks[BackAcc].SetMoney(mon);
+  cout<<"계좌입금 완료!"<<endl;
+  }
   
   
  
