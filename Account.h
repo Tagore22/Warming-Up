@@ -1,5 +1,5 @@
-#ifdef Bank_123
-#define Bank_123
+#ifndef Account_123
+#define Account_123
 
 class Account
 {
