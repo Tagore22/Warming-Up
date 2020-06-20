@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cstring>
 
+using namespace std;
+
 Bank::Bank(int a, int b, char * c) : ID(a), Money(b)
 {
   Name = new char[strlen(c)+1];
