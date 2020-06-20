@@ -6,10 +6,10 @@
 using std::cout;
 using std::endl;
 
-class Bank
+class Account
 {
 private:
- int Account;
+ int ID;
  int Money;
  char * Name;
 public:
@@ -26,7 +26,7 @@ Bank::Bank()
 {
 };
  
-Bank::Bank(int a, int b, char * c) : Account(a), Money(b)
+Bank::Bank(int a, int b, char * c) : ID(a), Money(b)
 {
   Name = new char[strlen(c)+1];
   strcpy(Name, c);
@@ -49,12 +49,12 @@ int Bank::GetMoney() const
 
 void Bank::GetAccount() const
 {
- return Account;
+ return ID;
 }
 
 void Bank::ShowBank() const
 {
- cout<<"계좌번호 : "<<Account<<endl;
+ cout<<"계좌번호 : "<<ID<<endl;
  cout<<"잔 액 : "<<Money<<endl;
  cout<<"예금주 : "<<Name<<endl;
 }
