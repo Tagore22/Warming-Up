@@ -6,7 +6,7 @@ using namespace std;
 
 
 
-Account * Handler[100];
+/*Account * Handler[100];
   int HandlerNum;
  public :
   BankHandler();
@@ -15,7 +15,7 @@ Account * Handler[100];
   void MakeBank();
   void PlusMoney();
   void MinusMoney();
-  void ShowAll() const;
+  void ShowAll() const;*/
 
 void BankHandler::ShowMenu() const
 {
@@ -91,11 +91,11 @@ void BankHandler::PlusMoney()
    else
    break;
   }
-  cout<<"입금액 입력";
-  cin>>NewMoney;
   while(1)
   {
-   if(NewMoney < 0)
+  cout<<"입금액 입력";
+  cin>>NewMoney;
+  if(NewMoney < 0)
    {
      cout<<"잘못된 금액 입력!"<<endl;
      coutinue;
@@ -103,7 +103,7 @@ void BankHandler::PlusMoney()
    else
     break;
   }
-  Handler[BackAcc].SetMoney(Newmoney);
+  Handler[BackAcc].Deposit(Newmoney);
   cout<<"계좌입금 완료!"<<endl;
   }
 
@@ -134,11 +134,11 @@ void BankHandler::MinusMoney()
    else
    break;
   }
-  cout<<"입금액 입력";
-  cin>>NewMoney;
   while(1)
   {
-   if(NewMoney < 0)
+  cout<<"입금액 입력";
+  cin>>NewMoney;
+  if(NewMoney < 0)
    {
      cout<<"잘못된 금액 입력!"<<endl;
      coutinue;
@@ -146,6 +146,12 @@ void BankHandler::MinusMoney()
    else
     break;
   }
-  Handler[BackAcc].SetMoney(-(Newmoney));
+  Handler[BackAcc].WithDraw(Newmoney);
   cout<<"계좌입금 완료!"<<endl;
   }
+
+void BankHandler::ShowAll() const
+{
+  for(int i = 0; i < HandlerNum; i++)
+    Hanlder[i].ShowAccount();
+}
