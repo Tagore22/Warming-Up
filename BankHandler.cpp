@@ -40,7 +40,7 @@ void BankHandler::MakeBank()
   cin>>NewID;
   for(int i = 0; i < HandlerNum; i++)
    {
-    if(Handler[i].ID == NewID)
+    if(Handler[i].GetID() == NewID)
      {
       jungbok = true;
       break;
@@ -62,9 +62,9 @@ void BankHandler::MakeBank()
  Handler[HandlerNum++] = new Account(NewID, NewMoney, NewName);
  
  cout<<"계좌생성 완료!"<<endl;
- }
+}
  
- void BankHandler::PlusMoney()
+void BankHandler::PlusMoney()
  {
   int NewID;
   int NewMoney;
@@ -77,7 +77,7 @@ void BankHandler::MakeBank()
   cin>>NewID;
   for(int i = 0; i < HandlerNum; i++)
    {
-    if(Handler[i].ID == NewID)
+    if(Handler[i].GetID() == NewID)
      {
       BankAcc = i;
       break;
@@ -93,6 +93,59 @@ void BankHandler::MakeBank()
   }
   cout<<"입금액 입력";
   cin>>NewMoney;
+  while(1)
+  {
+   if(NewMoney < 0)
+   {
+     cout<<"잘못된 금액 입력!"<<endl;
+     coutinue;
+   }
+   else
+    break;
+  }
   Handler[BackAcc].SetMoney(Newmoney);
+  cout<<"계좌입금 완료!"<<endl;
+  }
+
+void BankHandler::MinusMoney()
+{
+  int NewID;
+  int NewMoney;
+  int BankAcc = -1;
+  
+  cout<<"계좌출금"<<endl;
+  while(1)
+ {
+  cout<<"계좌번호 입력 :";
+  cin>>NewID;
+  for(int i = 0; i < HandlerNum; i++)
+   {
+    if(Handler[i].GetID() == NewID)
+     {
+      BankAcc = i;
+      break;
+     }
+    }
+   if(BankAcc = -1)
+   {
+    cout<<"잘못된 계좌번호 입력!"<<endl;
+    continue;
+   }
+   else
+   break;
+  }
+  cout<<"입금액 입력";
+  cin>>NewMoney;
+  while(1)
+  {
+   if(NewMoney < 0)
+   {
+     cout<<"잘못된 금액 입력!"<<endl;
+     coutinue;
+   }
+   else
+    break;
+  }
+  Handler[BackAcc].SetMoney(-(Newmoney));
   cout<<"계좌입금 완료!"<<endl;
   }
