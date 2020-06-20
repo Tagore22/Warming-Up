@@ -1,6 +1,20 @@
-#include <Bank.h>
+#include <Account.h>
 #include <iostream>
 #include <cstring>
+
+/*private:
+ int ID;
+ int Money;
+ char * Name;
+public:
+ Bank(int a, int b, char * c);
+ ~Bank();
+ Virtual void SetMoney(int a);
+ int GetMoney() const;
+ void GetID() const;
+ Virtual void ShowAccount() const;
+};*/
+ 
 
 using namespace std;
 
