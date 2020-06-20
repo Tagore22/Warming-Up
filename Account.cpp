@@ -37,7 +37,7 @@ int Account::GetMoney() const
  return Money;
 }
 
-void Account::GetID() const
+int Account::GetID() const
 {
  return ID;
 }
