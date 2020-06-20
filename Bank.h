@@ -13,7 +13,6 @@ private:
  int Money;
  char * Name;
 public:
- Bank();
  Bank(int a, int b, char * c);
  ~Bank();
  void SetMoney(int a);
@@ -22,9 +21,6 @@ public:
  void ShowBank() const;
 };
  
-Bank::Bank()
-{
-};
  
 Bank::Bank(int a, int b, char * c) : ID(a), Money(b)
 {
