@@ -1,12 +1,7 @@
-#include <Bank.h>
+#include <Account.h>
+#include <BankHandler.h>
 #include <iostream>
 #include <cstring> 
-
-void ShowMenu();
-void MakeBank();
-void PlusMoney();
-void MinusMoney();
-void ShowAll();
 
 #define Bank_len 100
 
@@ -19,14 +14,11 @@ namespace Menu
  ProgramEnd = 5;
 };
 
-using std::cout;
-using std::cin;
-using std::endl;
-
+using namespace std;
 
 int main()
 {
- Bank * Banks = new Bank[Bank_len];
+ BankHandler Handle;
  int num = 0;
  int MenuNum; 
  
