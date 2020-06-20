@@ -32,11 +32,6 @@ int Account::WithDraw(int a)
  }
 }
 
-int Account::GetMoney() const
-{
- return Money;
-}
-
 int Account::GetID() const
 {
  return ID;
