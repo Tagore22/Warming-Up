@@ -13,9 +13,9 @@ class BankHandler
   void MakeBank();
   void PlusMoney();
   void MinusMoney();
+  void ShowAll() const;
 };
   
-
 #endif
 
 
