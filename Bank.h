@@ -1,10 +1,5 @@
 #ifdef Bank_123
 #define Bank_123
-#include<iostream>
-#include<cstring>
-
-using std::cout;
-using std::endl;
 
 class Account
 {
