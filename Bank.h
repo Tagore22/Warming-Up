@@ -10,10 +10,10 @@ private:
 public:
  Bank(int a, int b, char * c);
  ~Bank();
- void SetMoney(int a);
+ Virtual void SetMoney(int a);
  int GetMoney() const;
- void GetAccount() const;
- void ShowBank() const;
+ void GetID() const;
+ Virtual void ShowAccount() const;
 };
  
  
@@ -38,12 +38,12 @@ int Bank::GetMoney() const
  return Money;
 }
 
-void Bank::GetAccount() const
+void Bank::GetID() const
 {
  return ID;
 }
 
-void Bank::ShowBank() const
+void Bank::ShowAccount() const
 {
  cout<<"계좌번호 : "<<ID<<endl;
  cout<<"잔 액 : "<<Money<<endl;
