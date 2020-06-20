@@ -10,10 +10,12 @@ class BankHandler
   BankHandler();
   ~BankHandler();
   void ShowMenu() const;
-  void MakeBank();
+  void MakeAccount();
   void PlusMoney();
   void MinusMoney();
   void ShowAll() const;
+  void MakeNormalAccount();
+  void MakeHighAccount();
 };
   
 #endif
