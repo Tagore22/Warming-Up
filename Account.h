@@ -15,6 +15,26 @@ public:
  void GetID() const;
  Virtual void ShowAccount() const;
 };
+
+class NormalAccount : public Account
+{
+ private:
+ int InterRate;
+ public:
+ NormalAccount(int a, int b, char * c, int d);
+ Virtual void Deposit(int a);
+ Virtual void ShowAccount() const;
+ };
+
+class HighCreditAccount : public NormalAccount
+{
+ Private:
+ int SpecialRate;
+ public:
+ HighCreditAccount(int a, int b, char * c, int d, int e);
+ Virtual void Deposit(int a);
+ Virtual void ShowAccount() const;
+ };
  
 
  
