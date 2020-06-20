@@ -43,3 +43,36 @@ void Account::ShowAccount() const
  cout<<"잔 액 : "<<Money<<endl;
  cout<<"예금주 : "<<Name<<endl;
 }
+ 
+NormalAccount::NormalAccount(int a, int b, char * c, int d) : Account(a,b,c), InterRate(d)
+{
+}
+ 
+void NormalAccount::Deposit(int a)
+{
+ Account::Deposit(a);
+ Account::Deposit(Money*(InterRate/100.0));
+}
+ 
+void NormalAccount::ShowAccount() const
+{
+ Account::ShowAccount();
+ cout<<"이자율 : "<<InterRate<<endl;
+}
+
+HighCreditAccount(int a, int b, char * c, int d, int e) : NormalAccount(a,b,c,d), SpecialRate(e)
+{
+}
+ 
+void HighCreditAccount::Deposit(int a)
+{
+ NormalAccount::Deposit(a);
+ Account::Deposit(Money*(SpecialRate/100.0));
+}
+ 
+void HighCreditAccount::ShowAll() const
+{
+ NormalAccount::ShowAll();
+ cout<<"특별이자율 : "<<SpecialRate<<endl;
+}
+  
