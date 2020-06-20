@@ -16,9 +16,20 @@ Account::~Account()
  delete []Name;
 }
 
-void Account::SetMoney(int a)
+void Account::Deposit(int a)
 {
  Money += a;
+}
+
+int Account::WithDraw(int a)
+{
+ if(Money < a)
+  return -1;
+ else
+ {
+  Money -= a;
+  return Money;
+ }
 }
 
 int Account::GetMoney() const
