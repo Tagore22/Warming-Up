@@ -1,6 +1,8 @@
 #include <iostream>
 #include <HighCreditAccount.h>
 
+using namespace std;
+
 HighCreditAccount(int a, int b, char * c, int d, int e) : NormalAccount(a,b,c,d), SpecialRate(e)
 {
 }
