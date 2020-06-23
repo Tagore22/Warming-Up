@@ -1,4 +1,6 @@
 #include <Account.h>
+#include <NormalAccount.h>
+#include <HighCreditAccount.h>
 #include <BankHandler.h>
 #include <iostream>
 #include <cstring> 
@@ -27,19 +29,19 @@ int main()
   
   switch(MenuNum)
   {
-   case MakeBank:
+   case Menu::MakeBank:
     Handle.MakeBank();
     break;
-   case PlusMoney:
+   case Menu::PlusMoney:
     Handle.PlusMoney();
     break;
-   case MinusMoney:
+   case Menu::MinusMoney:
     Handle.MinusMoney();
     break;
-   case ShowAll:
+   case Menu::ShowAll:
     Handle.ShowAll();
     break;
-   case ProgramEnd:
+   case Menu::ProgramEnd:
     return 0;
    default:
     cout<<"잘못된 숫자 입력"<<endl;
